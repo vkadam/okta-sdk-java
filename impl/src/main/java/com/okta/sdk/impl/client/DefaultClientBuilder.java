@@ -217,6 +217,10 @@ public class DefaultClientBuilder implements ClientBuilder {
         if (Strings.hasText(props.get(DEFAULT_CLIENT_RETRY_MAX_ATTEMPTS_PROPERTY_NAME))) {
             clientConfig.setRetryMaxAttempts(Integer.parseInt(props.get(DEFAULT_CLIENT_RETRY_MAX_ATTEMPTS_PROPERTY_NAME)));
         }
+
+        if (Strings.hasText(props.get(DEFAULT_CLIENT_STALE_CONNECTION_CHECK_ENABLED_PROPERTY_NAME))) {
+            clientConfig.setStaleConnectionCheckEnabled(Boolean.valueOf(props.get(DEFAULT_CLIENT_STALE_CONNECTION_CHECK_ENABLED_PROPERTY_NAME)));
+        }
     }
 
     @Override

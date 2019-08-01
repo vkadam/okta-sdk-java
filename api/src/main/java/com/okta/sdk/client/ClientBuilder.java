@@ -203,6 +203,7 @@ public interface ClientBuilder {
     String DEFAULT_CLIENT_CACHE_CACHES_PROPERTY_NAME = "okta.client.cache.caches";
     String DEFAULT_CLIENT_ORG_URL_PROPERTY_NAME = "okta.client.orgUrl";
     String DEFAULT_CLIENT_CONNECTION_TIMEOUT_PROPERTY_NAME = "okta.client.connectionTimeout";
+    String DEFAULT_CLIENT_STALE_CONNECTION_CHECK_ENABLED_PROPERTY_NAME = "okta.client.staleConnectionCheckEnabled";
     String DEFAULT_CLIENT_AUTHENTICATION_SCHEME_PROPERTY_NAME = "okta.client.authenticationScheme";
     String DEFAULT_CLIENT_PROXY_PORT_PROPERTY_NAME = "okta.client.proxy.port";
     String DEFAULT_CLIENT_PROXY_HOST_PROPERTY_NAME = "okta.client.proxy.host";

@@ -55,6 +55,7 @@ public class ClientConfiguration {
     private BaseUrlResolver baseUrlResolver;
     private int retryMaxElapsed = 0;
     private int retryMaxAttempts = 0;
+    private boolean staleConnectionCheckEnabled;
 
     public String getApiToken() {
         return apiToken;
@@ -253,6 +254,15 @@ public class ClientConfiguration {
                 ", retryMaxElapsed=" + retryMaxElapsed +
                 ", retryMaxAttempts=" + retryMaxAttempts +
                 ", proxy=" + proxy +
+                ", staleConnectionCheckEnabled=" + staleConnectionCheckEnabled +
                 '}';
+    }
+
+    public boolean isStaleConnectionCheckEnabled() {
+        return staleConnectionCheckEnabled;
+    }
+
+    public void setStaleConnectionCheckEnabled(boolean staleConnectionCheckEnabled) {
+        this.staleConnectionCheckEnabled = staleConnectionCheckEnabled;
     }
 }

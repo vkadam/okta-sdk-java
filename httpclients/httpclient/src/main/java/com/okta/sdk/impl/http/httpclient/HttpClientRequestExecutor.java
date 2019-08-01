@@ -147,9 +147,13 @@ public class HttpClientRequestExecutor extends RetryRequestExecutor {
         // Therefore, multiply it by 1000 to be milliseconds since RequestConfig expects milliseconds.
         int connectionTimeoutAsMilliseconds = connectionTimeout * 1000;
 
+        if (clientConfiguration.isStaleConnectionCheckEnabled()) {
+            log.warn("Stale connection check is enabled");
+        }
         RequestConfig requestConfig = RequestConfig.custom()
                 .setConnectTimeout(connectionTimeoutAsMilliseconds)
                 .setSocketTimeout(connectionTimeoutAsMilliseconds)
+                .setStaleConnectionCheckEnabled(clientConfiguration.isStaleConnectionCheckEnabled())
                 .build();
 
         ConnectionConfig connectionConfig = ConnectionConfig.custom().setCharset(Consts.UTF_8).build();

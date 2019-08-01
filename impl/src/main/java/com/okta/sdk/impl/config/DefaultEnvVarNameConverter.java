@@ -39,7 +39,8 @@ public class DefaultEnvVarNameConverter implements EnvVarNameConverter {
             ClientBuilder.DEFAULT_CLIENT_AUTHENTICATION_SCHEME_PROPERTY_NAME,
             ClientBuilder.DEFAULT_CLIENT_REQUEST_TIMEOUT_PROPERTY_NAME,
             ClientBuilder.DEFAULT_CLIENT_RETRY_MAX_ATTEMPTS_PROPERTY_NAME,
-            ClientBuilder.DEFAULT_CLIENT_TESTING_DISABLE_HTTPS_CHECK_PROPERTY_NAME);
+            ClientBuilder.DEFAULT_CLIENT_TESTING_DISABLE_HTTPS_CHECK_PROPERTY_NAME,
+            ClientBuilder.DEFAULT_CLIENT_STALE_CONNECTION_CHECK_ENABLED_PROPERTY_NAME);
     }
 
     private Map<String, String> buildReverseLookupToMap(String... dottedPropertyNames) {
